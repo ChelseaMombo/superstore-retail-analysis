@@ -4,16 +4,29 @@
 Which products and months drive the most sales, and where is the business losing money?
 
 ## Dataset
-Superstore Sales dataset (Kaggle): about 9,994 orders with sales, quantity, discount and profit across categories and regions.
+Superstore Sales dataset (Kaggle): 9,994 order lines with sales, quantity, discount and profit across categories and regions.
 
 ## Tools
-- SQL (cleaning and analysis)
-- Python / pandas (exploration and charts)
-- Power BI (dashboard)
-- Git and GitHub (version control)
+- SQL Server (SSMS) for loading, cleaning and analysis
+- Python / pandas for exploration and charts (coming next)
+- Power BI for a dashboard (coming next)
+- Git and GitHub for version control
 
 ## Key Findings
-Coming soon.
+1. **Three sub-categories lose money:** Tables, Bookcases and Supplies have negative total profit.
+2. **Discounts above 20% turn profit negative.** Order lines with discounts up to 20% are profitable, but the 21-40% band loses about 35,800 and the 41%+ band loses about 99,600. Together these bands are only about 14% of order lines (1,393 of 9,994) yet lose roughly 135,000.
+3. **Discounting doesn't explain everything.** Tables (26.1% average discount) and Bookcases (21.1%) are heavily discounted, but Supplies (7.7%) loses money with a low discount, so something else is going on there.
+4. **Sales and profit peak in September, November and December** (all years combined). November has the highest sales but a lower profit margin than December or September.
+5. **Top sellers aren't always profitable.** The Canon imageCLASS 2200 Advanced Copier is the #1 product by sales, but three of the top 10 products lose money: the Cisco TelePresence System EX90, the GBC DocuBind P400 and the High Speed Automatic Electric Letter Opener.
+
+## Project Structure
+- `data/` raw dataset
+- `sql/` numbered scripts, run in order:
+  - `01_create_and_load.sql` creates the database and loads the CSV
+  - `02_clean_dates.sql` converts text dates into real dates
+  - `03_profit_analysis.sql` loss-making sub-categories and discount bands
+  - `04_monthly_sales.sql` sales and profit by month
+  - `05_top_products.sql` top 10 products by sales
 
 ## Status
-In progress.
+SQL analysis complete. Python charts and Power BI dashboard in progress.
