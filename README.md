@@ -9,8 +9,13 @@ Superstore Sales dataset (Kaggle): 9,994 order lines with sales, quantity, disco
 ## Tools
 - SQL Server (SSMS) for loading, cleaning and analysis
 - Python / pandas / matplotlib for exploration and charts
-- Power BI for a dashboard (coming next)
+- Power BI for the dashboard
 - Git and GitHub for version control
+
+## Dashboard
+![Superstore dashboard](images/dashboard.png)
+
+The Power BI file is in `dashboard/superstore_dashboard.pbix`.
 
 ## Key Findings
 1. **Three sub-categories lose money:** Tables, Bookcases and Supplies have negative total profit.
@@ -36,7 +41,8 @@ Superstore Sales dataset (Kaggle): 9,994 order lines with sales, quantity, disco
   - `01_explore.py` loads the CSV and checks its shape and columns
   - `02_profit_chart.py` profit by sub-category
   - `03_discount_chart.py` profit by discount band
-- `images/` charts produced by the Python scripts
+- `dashboard/` Power BI dashboard (`.pbix`)
+- `images/` charts and dashboard screenshot
 
 ## Status
-SQL analysis and Python charts complete. Power BI dashboard in progress.
+Complete: SQL analysis, Python charts and Power BI dashboard.
