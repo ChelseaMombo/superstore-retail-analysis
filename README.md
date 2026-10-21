@@ -8,7 +8,7 @@ Superstore Sales dataset (Kaggle): 9,994 order lines with sales, quantity, disco
 
 ## Tools
 - SQL Server (SSMS) for loading, cleaning and analysis
-- Python / pandas for exploration and charts (coming next)
+- Python / pandas / matplotlib for exploration and charts
 - Power BI for a dashboard (coming next)
 - Git and GitHub for version control
 
@@ -19,6 +19,11 @@ Superstore Sales dataset (Kaggle): 9,994 order lines with sales, quantity, disco
 4. **Sales and profit peak in September, November and December** (all years combined). November has the highest sales but a lower profit margin than December or September.
 5. **Top sellers aren't always profitable.** The Canon imageCLASS 2200 Advanced Copier is the #1 product by sales, but three of the top 10 products lose money: the Cisco TelePresence System EX90, the GBC DocuBind P400 and the High Speed Automatic Electric Letter Opener.
 
+## Charts
+![Total profit by sub-category](images/profit_by_subcategory.png)
+
+![Total profit by discount band](images/profit_by_discount_band.png)
+
 ## Project Structure
 - `data/` raw dataset
 - `sql/` numbered scripts, run in order:
@@ -27,6 +32,11 @@ Superstore Sales dataset (Kaggle): 9,994 order lines with sales, quantity, disco
   - `03_profit_analysis.sql` loss-making sub-categories and discount bands
   - `04_monthly_sales.sql` sales and profit by month
   - `05_top_products.sql` top 10 products by sales
+- `python/` pandas scripts that reproduce findings as charts:
+  - `01_explore.py` loads the CSV and checks its shape and columns
+  - `02_profit_chart.py` profit by sub-category
+  - `03_discount_chart.py` profit by discount band
+- `images/` charts produced by the Python scripts
 
 ## Status
-SQL analysis complete. Python charts and Power BI dashboard in progress.
+SQL analysis and Python charts complete. Power BI dashboard in progress.
